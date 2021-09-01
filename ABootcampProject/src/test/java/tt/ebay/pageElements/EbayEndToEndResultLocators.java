@@ -19,32 +19,49 @@ public class EbayEndToEndResultLocators {
 
 	@FindBy(xpath = "//input[@id='city']")
 	public WebElement city;
+	
+	//@FindBy(xpath = "//select[@id='stateOrProvince']")
+	//public WebElement state;
+	
+	//@FindBy(xpath = "//button[normalize-space()='Done']")
+	//public WebElement cali;
 
 	@FindBy(xpath = "//input[@id='postalCode']")
 	public WebElement zip;
 
 	@FindBy(xpath = "//input[@id='firstName']")
 	public WebElement fn;
+	
 	@FindBy(xpath = "//input[@id='lastName']")
 	public WebElement ln;
+	
 	@FindBy(xpath = "//input[@id='addressLine1']")
 	public WebElement addy;
+	
 	@FindBy(xpath = "//input[@id='email']")
 	public WebElement email;
+	
 	@FindBy(xpath = "//input[@id='emailConfirm']")
 	public WebElement conemail;
+	
 	@FindBy(xpath = "//input[@id='phoneNumber']")
 	public WebElement numbs;
+	
 	@FindBy(xpath = "//button[contains(text(),'Done')]")
 	public WebElement doneship;
+	
 	@FindBy(xpath = "//input[@id='cardNumber']")
 	public WebElement cardnum;
+	
 	@FindBy(xpath = "//input[@id='cardExpiryDate']")
 	public WebElement cardexp;
+	
 	@FindBy(xpath = "//input[@id='securityCode']")
 	public WebElement cardsec;
+	
 	@FindBy(xpath = "//button[contains(text(),'Done')]")
 	public WebElement carddone;
+	
 	@FindBy(xpath = "//span[normalize-space()='Confirm and pay']")
 	public WebElement conandpay;
 
