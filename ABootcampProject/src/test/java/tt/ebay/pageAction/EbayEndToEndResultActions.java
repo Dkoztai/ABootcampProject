@@ -36,6 +36,8 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		EbayEndToEndResultLocatorsObj.city.clear();
 		EbayEndToEndResultLocatorsObj.city.sendKeys("South Richmondhill");
 		EbayEndToEndResultLocatorsObj.zip.clear();
+//		EbayEndToEndResultLocatorsObj.state.click();
+//		EbayEndToEndResultLocatorsObj.cali.click();
 		EbayEndToEndResultLocatorsObj.zip.sendKeys("11419");
 		EbayEndToEndResultLocatorsObj.email.clear();
 		EbayEndToEndResultLocatorsObj.email.sendKeys("wafflemakerzz@gmail.com");
