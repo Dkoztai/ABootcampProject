@@ -26,6 +26,11 @@ public class SetupDrivers {
 		return driver;
 	}
 
+	public static void tearDownDriver() {
+		// TODO Auto-generated method stub
+		
+	}
+
 //	public static void tearDownDriver() {
 	//	driver.quit();
 	}

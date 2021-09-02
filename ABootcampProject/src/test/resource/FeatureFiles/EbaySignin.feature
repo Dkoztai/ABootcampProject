@@ -1,4 +1,4 @@
-@tag1
+@regression
 Feature: Ebay Signin Functionality
 
   Scenario: User should be able to sign in

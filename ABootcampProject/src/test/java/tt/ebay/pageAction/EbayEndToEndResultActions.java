@@ -1,6 +1,10 @@
 package tt.ebay.pageAction;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import tt.ebay.pageElements.EbayAddToCartResultLocators;
 import tt.ebay.pageElements.EbayEndToEndResultLocators;
@@ -26,7 +30,7 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		Thread.sleep(3000);
 	}
 	
-	public void ship() throws InterruptedException {
+/*	public void ship() throws InterruptedException {
 		EbayEndToEndResultLocatorsObj.fn.clear();
 		EbayEndToEndResultLocatorsObj.fn.sendKeys("Waffel");
 		EbayEndToEndResultLocatorsObj.ln.clear();
@@ -46,8 +50,59 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		EbayEndToEndResultLocatorsObj.numbs.clear();
 		EbayEndToEndResultLocatorsObj.numbs.sendKeys("9546746511");
 		EbayEndToEndResultLocatorsObj.doneship.click();
+		Thread.sleep(3000);                                     */
+	public void ship() throws InterruptedException {
+		EbayEndToEndResultLocatorsObj.fn.clear();
+		EbayEndToEndResultLocatorsObj.fn.sendKeys("Waffel");
+		EbayEndToEndResultLocatorsObj.ln.clear();
+		EbayEndToEndResultLocatorsObj.ln.sendKeys("Maker");
+		EbayEndToEndResultLocatorsObj.addy.clear();
+		EbayEndToEndResultLocatorsObj.addy.sendKeys("40152 Sagewood Dr");
+		EbayEndToEndResultLocatorsObj.city.clear();
+		EbayEndToEndResultLocatorsObj.city.sendKeys("Palm Dessert");
+		// EbayEndToEndResultLocatorsObj.state.click();
+		// EbayEndToEndResultLocatorsObj.cali.click();
+		EbayEndToEndResultLocatorsObj.email.clear();
+		EbayEndToEndResultLocatorsObj.email.sendKeys("wafflemakerzz@gmail.com");
+		EbayEndToEndResultLocatorsObj.conemail.clear();
+		EbayEndToEndResultLocatorsObj.conemail.sendKeys("wafflemakerzz@gmail.com");
+		EbayEndToEndResultLocatorsObj.numbs.clear();
+		EbayEndToEndResultLocatorsObj.numbs.sendKeys("9546746511");
 		Thread.sleep(3000);
-	}
+		}
+
+		WebDriver driver;
+
+		       public void stateDropDown() {
+		               System.setProperty("webdriver.chrome.driver", "C://Program Files/Chrome.driver/chromedriver.exe");
+		      driver = new ChromeDriver();
+		     
+		      Select drpState = new Select(driver.findElement(By.name("stateOrProvince")));
+		      drpState.selectByVisibleText("California");
+		}
+		public void zipship(String zipship) throws InterruptedException {
+		EbayEndToEndResultLocatorsObj.zip.clear();
+		if (zipship.equals("92260")){
+		EbayEndToEndResultLocatorsObj.zip.sendKeys("92260");
+		}else if (zipship.equals("11")){
+		EbayEndToEndResultLocatorsObj.zip.sendKeys("11");
+		}else if (zipship.equals("00003")){
+		EbayEndToEndResultLocatorsObj.zip.sendKeys("00003");
+		}
+		}
+     	public void doneBtn() throws InterruptedException {
+		EbayEndToEndResultLocatorsObj.doneship.click();
+		Thread.sleep(3000);
+		}
+		public void verifyzip(String verifyzip) throws InterruptedException {
+		if(verifyzip.equals("92260")){
+		EbayEndToEndResultLocatorsObj.zipcheck.isDisplayed();
+		}else if (verifyzip.equals("11")){
+		EbayEndToEndResultLocatorsObj.shortzip.isDisplayed();
+		}else if (verifyzip.equals("00003")){
+		EbayEndToEndResultLocatorsObj.changezip.isDisplayed();
+		}  
+		}
 	
 	public void pay() throws InterruptedException {
 		EbayEndToEndResultLocatorsObj.paywith.click();
