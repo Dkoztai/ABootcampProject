@@ -1,4 +1,4 @@
-@tag1
+@regression
 Feature: Ebay top menu bar functionality
 
   Scenario: Top menu bar should display tabs

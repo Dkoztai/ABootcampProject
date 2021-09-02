@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 0.272 s <<< FAILURE! - in TestSuite
+setUpClass(tt.runners.RunnerClass)  Time elapsed: 0.211 s  <<< FAILURE!
+cucumber.runtime.CucumberException: Couldn't load plugin class: com.cucumber,listener.ExtentCucumberFormatter
+Caused by: java.lang.ClassNotFoundException: com.cucumber,listener.ExtentCucumberFormatter
+

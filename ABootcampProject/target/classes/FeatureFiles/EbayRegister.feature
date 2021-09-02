@@ -1,4 +1,4 @@
-@tag1
+@regression
 Feature: Ebay Registartion
 
   @tag1
