@@ -12,6 +12,13 @@ Feature: Ebay top menu bar functionality
     And go to checkout
     And select continue as guest
     And fill out ship to
+    And fill out "<zipcode>"
+    And verify by "<zipcode>"
     And fill out pay with
     Then Confirm and pay
     
+   Examples: 
+      |zipcode|
+      |33076  |
+      |11     |
+      |00003  |
