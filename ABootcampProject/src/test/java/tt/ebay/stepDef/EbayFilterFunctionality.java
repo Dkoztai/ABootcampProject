@@ -13,7 +13,7 @@ public class EbayFilterFunctionality {
 	@When("^enter ekko in search bar$")
 	public void enter_ekko_in_search_bar() throws Throwable {
 		EbayFilterResultActionsObj.sfa();
-		}
+	}
 
 	@When("^click search button$")
 	public void click_filter_category_button() throws Throwable {

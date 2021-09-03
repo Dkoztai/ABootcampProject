@@ -3,15 +3,11 @@ package tt.ebay.pageElements;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-
 public class EbayHomePageLocators {
 
-	// Search BUtton
 	@FindBy(xpath = "//input[@id='gh-btn']")
 	public WebElement sfabtn;
 
-	// Search Text Box
 	@FindBy(xpath = "//input[@id='gh-ac']")
 	public WebElement txtbxbtnSearch;
 

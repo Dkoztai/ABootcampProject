@@ -6,7 +6,7 @@ import tt.ebay.pageAction.EbayShopByResultActions;
 import tt.ebay.pageAction.EbaySigninResultActions;
 
 public class EbayShopByFunctionality {
-	
+
 	EbayShopByResultActions EbayShopByResultActionsObj = new EbayShopByResultActions();
 
 	@When("^click shop by category$")

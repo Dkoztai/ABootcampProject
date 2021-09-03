@@ -8,9 +8,9 @@ import tt.ebay.pageAction.EbayTopMenuBarResultActions;
 
 public class EbayTopMenuBarFunctionality {
 
-	EbayTopMenuBarResultActions EbayTopMenuBarResultActionsObj= new EbayTopMenuBarResultActions();
+	EbayTopMenuBarResultActions EbayTopMenuBarResultActionsObj = new EbayTopMenuBarResultActions();
 	EbayHomePageActions EbayHomePageActionsObj = new EbayHomePageActions();
-	
+
 	@When("^User hovers over top menu$")
 	public void user_hovers_over_top_menu() throws Throwable {
 		EbayTopMenuBarResultActionsObj.hoverbtnSearch();
@@ -27,4 +27,3 @@ public class EbayTopMenuBarFunctionality {
 	}
 
 }
-	

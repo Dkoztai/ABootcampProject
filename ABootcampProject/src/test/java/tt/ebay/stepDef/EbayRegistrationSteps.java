@@ -39,7 +39,6 @@ public class EbayRegistrationSteps {
 		EbayRegistrationResultActionsObj.inputPasswR();
 	}
 
-
 	@Then("^verify create account$")
 	public void verify_create_account() throws Throwable {
 		EbayHomePageActionsObj.verifysigninSearch();

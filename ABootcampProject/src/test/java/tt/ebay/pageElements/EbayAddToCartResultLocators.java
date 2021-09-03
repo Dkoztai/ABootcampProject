@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 public class EbayAddToCartResultLocators {
 
 
-	@FindBy(xpath = "//a[@id='s0-0-18-5-11-26-77-2[1]-atcBtn']")
+	@FindBy(xpath = "//*[contains(text(),'Add to cart')]")
 	public WebElement bitbtn;
 	
-	@FindBy(xpath = "//div[contains(text(),'Callaway C70146 300 Pro Golf Laser Rangefinder Wit')]")
+	@FindBy(xpath = "//div[contains(text(),'Boblov LF600G Golf Laser Rangefinder')]")
 	public WebElement ub;
 	
 	@FindBy(xpath = "//button[normalize-space()='Go to checkout']")

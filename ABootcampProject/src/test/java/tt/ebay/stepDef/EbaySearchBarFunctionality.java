@@ -7,10 +7,9 @@ import tt.ebay.pageAction.EbayHomePageActions;
 import tt.ebay.pageAction.EbaySearchBarResultActions;
 
 public class EbaySearchBarFunctionality {
-	
+
 	EbayHomePageActions EbayHomePageActionsObj = new EbayHomePageActions();
-	EbaySearchBarResultActions EbaySearchBarResultActionsObjs= new EbaySearchBarResultActions();
-	
+	EbaySearchBarResultActions EbaySearchBarResultActionsObjs = new EbaySearchBarResultActions();
 
 	@When("^click search bar$")
 	public void click_search_bar() throws Throwable {
@@ -26,6 +25,5 @@ public class EbaySearchBarFunctionality {
 	public void verify_verify_baby() throws Throwable {
 		EbaySearchBarResultActionsObjs.veryfiybabysrch();
 	}
-
 
 }

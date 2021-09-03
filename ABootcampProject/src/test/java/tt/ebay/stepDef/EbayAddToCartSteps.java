@@ -6,15 +6,14 @@ import cucumber.api.java.en.When;
 import tt.ebay.pageAction.EbayAddToCartResultActions;
 
 public class EbayAddToCartSteps {
-	
-	EbayAddToCartResultActions  EbayAddToCartResultActionsObj = new EbayAddToCartResultActions();
-	
+
+	EbayAddToCartResultActions EbayAddToCartResultActionsObj = new EbayAddToCartResultActions();
 
 	@When("^select UBHIB$")
 	public void select_UB() throws Throwable {
 		EbayAddToCartResultActionsObj.cd();
 	}
-	
+
 	@When("^click buy it now$")
 	public void click_but_it_now() throws Throwable {
 		EbayAddToCartResultActionsObj.buyin();
@@ -24,6 +23,5 @@ public class EbayAddToCartSteps {
 	public void add_to_cart() throws Throwable {
 		EbayAddToCartResultActionsObj.addtocart();
 	}
-
 
 }
