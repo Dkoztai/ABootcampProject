@@ -2,18 +2,16 @@
 Feature: EbayEndToEndFunctionality
 
   Scenario Outline: user is able to checkout as guest
-    When enter ekko in search bar
-    And click search button
-    And click buy it now category
-    And click buy it now
-    And select UBHIB
-    And add to cart
-    And go to cart
-    And go to checkout
+   When click shop by category
+    And select golf
+    When Verify golf page open
+    When select UBHIB
+    When click buy it now
+    When add to cart
     And select continue as guest
     And fill out ship to
-    And select state
     And fill out "<zipcode>"
+    And select state
     And click done
     And verify by "<zipcode>"
     And fill out pay with
@@ -21,6 +19,6 @@ Feature: EbayEndToEndFunctionality
 
    Examples:
       |zipcode|
-      |33076  |
+      |92260  |
       |11     |
       |00003  |
