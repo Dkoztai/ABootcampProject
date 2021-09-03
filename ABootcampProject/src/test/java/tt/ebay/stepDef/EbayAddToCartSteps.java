@@ -9,26 +9,21 @@ public class EbayAddToCartSteps {
 	
 	EbayAddToCartResultActions  EbayAddToCartResultActionsObj = new EbayAddToCartResultActions();
 	
-	@When("^click buy it now$")
-	public void click_but_it_now() throws Throwable {
-		EbayAddToCartResultActionsObj.buyin();
-	}
 
 	@When("^select UBHIB$")
 	public void select_UB() throws Throwable {
 		EbayAddToCartResultActionsObj.cd();
 	}
+	
+	@When("^click buy it now$")
+	public void click_but_it_now() throws Throwable {
+		EbayAddToCartResultActionsObj.buyin();
+	}
 
-	@When("^add to cart$")
+	@Then("^add to cart$")
 	public void add_to_cart() throws Throwable {
 		EbayAddToCartResultActionsObj.addtocart();
 	}
-
-	@Then("^go to cart$")
-	public void go_to_cart() throws Throwable {
-		EbayAddToCartResultActionsObj.gtcart();
-	}
-
 
 
 }

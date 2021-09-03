@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import tt.ebay.pageElements.EbayAddToCartResultLocators;
 import tt.ebay.pageElements.EbayEndToEndResultLocators;
 import tt.utilities.SetupDrivers;
@@ -60,7 +61,6 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		EbayEndToEndResultLocatorsObj.addy.sendKeys("40152 Sagewood Dr");
 		EbayEndToEndResultLocatorsObj.city.clear();
 		EbayEndToEndResultLocatorsObj.city.sendKeys("Palm Dessert");
-		// EbayEndToEndResultLocatorsObj.state.click();
 		// EbayEndToEndResultLocatorsObj.cali.click();
 		EbayEndToEndResultLocatorsObj.email.clear();
 		EbayEndToEndResultLocatorsObj.email.sendKeys("wafflemakerzz@gmail.com");
@@ -68,17 +68,23 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		EbayEndToEndResultLocatorsObj.conemail.sendKeys("wafflemakerzz@gmail.com");
 		EbayEndToEndResultLocatorsObj.numbs.clear();
 		EbayEndToEndResultLocatorsObj.numbs.sendKeys("9546746511");
+	//	EbayEndToEndResultLocatorsObj.state.click();
 		Thread.sleep(3000);
 		}
 
 		WebDriver driver;
 
 		       public void stateDropDown() {
-		               System.setProperty("webdriver.chrome.driver", "C://Program Files/Chrome.driver/chromedriver.exe");
-		      driver = new ChromeDriver();
+		            System.setProperty("webdriver.chrome.driver", "C:/TTSoftware/chromedriver.exe");
+		   //    		WebDriverManager.chromedriver().browserVersion("92.0.4515.159").setup();
+
 		     
-		      Select drpState = new Select(driver.findElement(By.name("stateOrProvince")));
-		      drpState.selectByVisibleText("California");
+		       EbayEndToEndResultLocatorsObj.state.click();
+		       EbayEndToEndResultLocatorsObj.cali.click(); 
+		   //   Select stateOrProvince = new Select(driver.findElement(By.id("stateOrProvince")));
+		    //  stateOrProvince.selectByValue("CA");
+		      
+		      
 		}
 		public void zipship(String zipship) throws InterruptedException {
 		EbayEndToEndResultLocatorsObj.zip.clear();
@@ -102,10 +108,13 @@ EbayEndToEndResultLocators EbayEndToEndResultLocatorsObj;
 		}else if (verifyzip.equals("00003")){
 		EbayEndToEndResultLocatorsObj.changezip.isDisplayed();
 		}  
+		Thread.sleep(6000);
 		}
 	
 	public void pay() throws InterruptedException {
 		EbayEndToEndResultLocatorsObj.paywith.click();
+		Thread.sleep(6000);
+		EbayEndToEndResultLocatorsObj.paywithbut.click();
 		EbayEndToEndResultLocatorsObj.cardnum.clear();
 		EbayEndToEndResultLocatorsObj.cardnum.sendKeys("2222400060000007");
 		EbayEndToEndResultLocatorsObj.cardexp.clear();

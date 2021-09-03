@@ -11,15 +11,16 @@ public class EbayEndToEndResultLocators {
 	@FindBy(xpath = "//button[normalize-space()='Continue as guest']")
 	public WebElement cguest;
 
-	@FindBy(xpath = "//button[normalize-space()='Done']")
+	@FindBy(xpath = "//input[@title='Add new card']")
 	public WebElement paywith;
-
+	@FindBy(xpath = "//input[@title='Add new card']")
+	public WebElement paywithbut;
 	@FindBy(xpath = "//button[normalize-space()='Done']")
 	public WebElement conpay;
-	//@FindBy(xpath = "//select[@id='stateOrProvince']")
-	//public WebElement state;
-	//@FindBy(xpath = "//button[normalize-space()='Done']")
-	//public WebElement cali;
+	@FindBy(xpath = "//select[@id='stateOrProvince']")
+	public WebElement state;
+	@FindBy(xpath = "//option[contains(text(),'California')]")
+	public WebElement cali;
 
 	@FindBy(xpath = "//input[@id='city']")
 	public WebElement city;
@@ -52,7 +53,7 @@ public class EbayEndToEndResultLocators {
 	@FindBy(xpath = "//span[normalize-space()='Confirm and pay']")
 	public WebElement conandpay;
 	
-	@FindBy(xpath = "//span[contains(text(),'Pay with')]")
+	@FindBy(xpath = "//span[contains(text(),'92260-2321')]")
 	public WebElement zipcheck;  
 
 	@FindBy(xpath = "//div[@id='postalCode-error']")
